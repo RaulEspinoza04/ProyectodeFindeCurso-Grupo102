@@ -1,5 +1,7 @@
 #H002- Login Docente
 
+# H003
+
 
 from src.modelo.asignatura import Asignatura
 from src.modelo.docente import Docente
@@ -11,9 +13,6 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     # Abre la session
     session = Session()
-
     session.commit()
     session.close()
-
-# H003
 
