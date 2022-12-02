@@ -1,6 +1,6 @@
-#H002
-
-# H003
+#H002- Login Docente
+#
+# H003- Login Estudiante
 
 from src.modelo.asignatura import Asignatura
 from src.modelo.docente import Docente
