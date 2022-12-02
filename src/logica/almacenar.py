@@ -1,1 +1,3 @@
-#H004-H005
+#H004-Registro Asignatura
+
+# H005-Registro Estudiante
