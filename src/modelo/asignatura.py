@@ -3,39 +3,42 @@ from sqlalchemy.orm import relationship
 
 from .declarative_base import Base
 
+
 class Asignatura(Base):
     __tablename__ = 'asignatura'
 
-    IDAsignatura = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     NombreA = Column(String(30))
     creditosA = Column(Integer)
     docentes = relationship('Docente', secondary='asignatura_docente')
     estudiantes = relationship('Estudiante', secondary='asignatura_estudiante')
 
-
 class AsignaturaDocente(Base):
     __tablename__ = 'asignatura_docente'
 
-    asignatura_IDAsignatura = Column(
+    asignatura_id = Column(
         Integer,
-        ForeignKey('asignatura.IDAsignatura'),
+        ForeignKey('Asignatura.id'),
         primary_key=True)
-
-    docente_IDDocente = Column(
+    docente_id = Column(
         Integer,
-        ForeignKey('docente.IDDocente'),
+        ForeignKey('Docente.id'),
         primary_key=True)
-
 
 class AsignaturaEstudiante(Base):
     __tablename__ = 'asignatura_estudiante'
 
-    asignatura_IDAsignatura = Column(
+    asignatura_id = Column(
         Integer,
-        ForeignKey('asignatura.IDAsignatura'),
+        ForeignKey('asignatura.id'),
         primary_key=True)
 
-    estudiante_IDEstudiante = Column(
+    estudiante_id = Column(
         Integer,
-        ForeignKey('estudiante.IDEstudiante'),
+        ForeignKey('estudiante.id'),
         primary_key=True)
+
+
+
+
+
