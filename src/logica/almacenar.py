@@ -1,7 +1,6 @@
 # H004-Registro Asignatura
 # H005-Registro Estudiante
 
-
 from src.modelo.asignatura import Asignatura
 from src.modelo.docente import Docente
 from src.modelo.estudiante import Estudiante
